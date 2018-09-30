@@ -24,7 +24,7 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 mongoose.Promise = global.Promise; // Set up promises with mongoose
 
 mongoose.connect( // Connect to the Mongo DB
-  process.env.MONGODB_URI || "mongodb://localhost/nyt-Headlines" //"mongodb://heroku_8zqx26cl:le1fh1tcj3m2gsggd819o9ns7e@ds249398.mlab.com:49398/heroku_8zqx26cl"
+  process.env.MONGODB_URI || "mongodb://localhost/nyt-Headlines" 
 );
 
 mongooseConnection.on('error', console.error.bind(console, 'connection error:'));
